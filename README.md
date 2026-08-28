@@ -346,19 +346,13 @@ Browser Response
 
 8. The browser displays the final registered student information.
 
-Diagram file:
+Diagram Placeholder
 
-documentations/laravel-request-lifecycle.png
+PLACEHOLDER: Add the Laravel Request Lifecycle image here.
 
+Expected file:
 
-
-
-
-
-
-
-
-
+![Laravel Request Lifecycle](documentations/laravel-request-lifecycle.png)
 
 ---
 
@@ -456,19 +450,13 @@ Is the Data Valid?
 
 ```
 
-Diagram file:
+Diagram Placeholder
 
-documentations/registration-flowchart.png
+PLACEHOLDER: Add the Registration Flowchart image here.
 
+Expected file:
 
-
-
-
-
-
-
-
-
+![Registration Flowchart](documentations/registration-flowchart.png)
 
 ---
 
@@ -514,18 +502,13 @@ UQ  email
 
 ```
 
-Diagram file:
+Diagram Placeholder
 
-documentations/ER DIAGRAM.drawio.png
+PLACEHOLDER: Add the Database ER Diagram image here.
 
+Expected file:
 
-
-
-
-
-
-
-
+![Database ER Diagram](documentations/ER%20DIAGRAM.drawio.png)
 
 
 ---
@@ -796,43 +779,83 @@ All project screenshots are stored inside the screenshots/ folder.
 
 Student Registration Form / Browser Output
 
+IMAGE PLACEHOLDER: Add the Student Registration Form / Browser Output screenshot here.
 
+Expected file:
+
+![Student Registration Form](screenshots/image.png)
 
 Validation Errors
 
+IMAGE PLACEHOLDER: Add the Validation Errors screenshot here.
 
+Expected file:
+
+![Validation Errors](screenshots/validation-errors.png)
 
 Profile Picture Preview
 
+IMAGE PLACEHOLDER: Add the Profile Picture Preview screenshot here.
 
+Expected file:
+
+![Profile Picture Preview](screenshots/profile-picture-preview.png)
 
 Successful Registration / Flash Message
 
+IMAGE PLACEHOLDER: Add the Successful Registration / Flash Message screenshot here.
 
+Expected file:
+
+![Successful Registration](screenshots/flash-success.png)
 
 Student Profile Page
 
+IMAGE PLACEHOLDER: Add the Student Profile Page screenshot here.
 
+Expected file:
+
+![Student Profile](screenshots/student-profile.png)
 
 Registered Students Page
 
+IMAGE PLACEHOLDER: Add the Registered Students Page screenshot here.
 
+Expected file:
+
+![Registered Students](screenshots/registered-students.png)
 
 MySQL Database Records
 
+IMAGE PLACEHOLDER: Add the MySQL Database Records screenshot here.
 
+Expected file:
+
+![Database Records](screenshots/database-records.png)
 
 VS Code Project Structure
 
+IMAGE PLACEHOLDER: Add the VS Code Project Structure screenshot here.
 
+Expected file:
+
+![Project Structure](screenshots/project-structure.png)
 
 GitHub Repository
 
+IMAGE PLACEHOLDER: Add the GitHub Repository screenshot here.
 
+Expected file:
+
+![GitHub Repository](screenshots/github-repository.png)
 
 Terminal Output
 
+IMAGE PLACEHOLDER: Add the Terminal Output screenshot here.
 
+Expected file:
+
+![Terminal Output](screenshots/terminal-output.png)
 
 ---
 
