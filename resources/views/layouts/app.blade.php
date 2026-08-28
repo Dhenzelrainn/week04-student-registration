@@ -14,8 +14,8 @@
     >
 
     <title>
-        @yield('title', 'Student Registration System')
-    </title>
+    @yield('title', 'Pinagbayanan University | Student Registration')
+</title>
 
     @vite([
         'resources/css/app.css',
@@ -29,18 +29,18 @@
     <div class="header-container">
 
         <a
-            href="{{ route('students.create') }}"
-            class="brand"
-        >
-            <span class="brand-icon">
-                S
-            </span>
+    href="{{ route('students.create') }}"
+    class="brand"
+>
+    <span class="brand-icon">
+        PU
+    </span>
 
-            <span class="brand-content">
-                <strong>Student Registration</strong>
-                <small>Information System</small>
-            </span>
-        </a>
+    <span class="brand-content">
+        <strong>Pinagbayanan University</strong>
+        <small>Student Registration System</small>
+    </span>
+</a>
 
         <nav class="main-nav">
             <a
@@ -101,15 +101,17 @@
     <div class="footer-container">
 
         <div>
-            <strong>Student Registration System</strong>
+            <strong>
+                Pinagbayanan University
+            </strong>
 
             <p>
-                Secure and organized student information management.
+                Student Registration System
             </p>
         </div>
 
         <span>
-            Laravel Student Registration
+            ITST 302 · Laravel Student Registration
         </span>
 
     </div>
