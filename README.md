@@ -348,11 +348,13 @@ Browser Response
 
 Diagram file:
 
-```text
+documentations/laravel-request-lifecycle.png
 
-documentation/laravel-request-lifecycle.png
 
-```
+
+
+
+
 
 
 
@@ -456,11 +458,13 @@ Is the Data Valid?
 
 Diagram file:
 
-```text
+documentations/registration-flowchart.png
 
-documentation/registration-flowchart.png
 
-```
+
+
+
+
 
 
 
@@ -512,11 +516,13 @@ UQ  email
 
 Diagram file:
 
-```text
+documentations/ER DIAGRAM.drawio.png
 
-documentation/database-er-diagram.png
 
-```
+
+
+
+
 
 
 
@@ -788,55 +794,7 @@ Expected result:
 
 All project screenshots are stored inside the screenshots/ folder.
 
-The following screenshots are currently included in the project:
-
-Screenshot
-
-File Name
-
 Student Registration Form / Browser Output
-
-screenshots/image.png
-
-Validation Errors
-
-screenshots/validation-errors.png
-
-Profile Picture Preview
-
-screenshots/profile-picture-preview.png
-
-Successful Registration / Flash Message
-
-screenshots/flash-success.png
-
-Student Profile Page
-
-screenshots/student-profile.png
-
-Registered Students Page
-
-screenshots/registered-students.png
-
-MySQL Database Records
-
-screenshots/database-records.png
-
-VS Code Project Structure
-
-screenshots/project-structure.png
-
-GitHub Repository
-
-screenshots/github-repository.png
-
-Terminal Output
-
-screenshots/terminal-output.png
-
-Student Registration Form / Browser Output
-
-
 
 
 
@@ -844,11 +802,7 @@ Validation Errors
 
 
 
-
-
 Profile Picture Preview
-
-
 
 
 
@@ -856,11 +810,7 @@ Successful Registration / Flash Message
 
 
 
-
-
 Student Profile Page
-
-
 
 
 
@@ -868,11 +818,7 @@ Registered Students Page
 
 
 
-
-
 MySQL Database Records
-
-
 
 
 
@@ -880,21 +826,13 @@ VS Code Project Structure
 
 
 
-
-
 GitHub Repository
-
-
 
 
 
 Terminal Output
 
 
-
-
-
-Note: image.png is currently used for the Student Registration Form / Browser Output screenshot. For cleaner naming, it may later be renamed to registration-form.png, but the README currently matches the actual file name in the project.
 
 ---
 
