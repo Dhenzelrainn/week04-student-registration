@@ -2,14 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*
     |--------------------------------------------------------------------------
-    | Profile Picture Preview
+    | Profile Picture Preview + 15 MB Client Validation
     |--------------------------------------------------------------------------
     */
+
+    const MAX_PROFILE_SIZE = 15 * 1024 * 1024;
+    const ALLOWED_TYPES = ['image/jpeg', 'image/png'];
 
     const profileInput = document.getElementById('profile_picture');
     const previewImage = document.getElementById('profilePreviewImage');
     const placeholder = document.getElementById('profilePlaceholder');
     const fileName = document.getElementById('fileName');
+    const clientFileError = document.getElementById('clientFileError');
 
     if (
         profileInput &&
@@ -24,6 +28,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            if (!ALLOWED_TYPES.includes(file.type)) {
+                this.value = '';
+
+                if (clientFileError) {
+                    clientFileError.textContent =
+                        'Please upload a JPG, JPEG, or PNG image only.';
+                    clientFileError.hidden = false;
+                }
+
+                return;
+            }
+
+            if (file.size > MAX_PROFILE_SIZE) {
+                this.value = '';
+
+                if (clientFileError) {
+                    clientFileError.textContent =
+                        'The profile picture must not be larger than 15 MB.';
+                    clientFileError.hidden = false;
+                }
+
+                if (fileName) {
+                    fileName.textContent =
+                        'File is too large. Choose an image up to 15 MB.';
+                }
+
+                return;
+            }
+
+            if (clientFileError) {
+                clientFileError.textContent = '';
+                clientFileError.hidden = true;
+            }
+
             if (fileName) {
                 fileName.textContent = file.name;
             }
@@ -32,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             reader.onload = function (event) {
                 previewImage.src = event.target.result;
-
                 previewImage.hidden = false;
                 placeholder.hidden = true;
             };

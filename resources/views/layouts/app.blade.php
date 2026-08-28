@@ -10,12 +10,10 @@
 
     <meta
         name="description"
-        content="Student Registration System built with Laravel"
+        content="Pinagbayanan University Student Registration System"
     >
 
-    <title>
-    @yield('title', 'Pinagbayanan University | Student Registration')
-</title>
+    <title>@yield('title', 'Pinagbayanan University | Student Registration')</title>
 
     @vite([
         'resources/css/app.css',
@@ -29,18 +27,16 @@
     <div class="header-container">
 
         <a
-    href="{{ route('students.create') }}"
-    class="brand"
->
-    <span class="brand-icon">
-        PU
-    </span>
+            href="{{ route('students.create') }}"
+            class="brand"
+        >
+            <span class="brand-icon">PU</span>
 
-    <span class="brand-content">
-        <strong>Pinagbayanan University</strong>
-        <small>Student Registration System</small>
-    </span>
-</a>
+            <span class="brand-content">
+                <strong>Pinagbayanan University</strong>
+                <small>Student Registration System</small>
+            </span>
+        </a>
 
         <nav class="main-nav">
             <a
@@ -52,7 +48,7 @@
 
             <a
                 href="{{ route('students.index') }}"
-                class="{{ request()->routeIs('students.index') ? 'active' : '' }}"
+                class="{{ request()->routeIs('students.index') || request()->routeIs('students.show') ? 'active' : '' }}"
             >
                 Students
             </a>
@@ -67,15 +63,11 @@
 
         <div class="flash-message flash-success">
 
-            <div class="flash-icon">
-                ✓
-            </div>
+            <div class="flash-icon">✓</div>
 
             <div class="flash-content">
                 <strong>Registration successful</strong>
-                <span>
-                    {{ session('success') }}
-                </span>
+                <span>{{ session('success') }}</span>
             </div>
 
             <button
@@ -101,13 +93,8 @@
     <div class="footer-container">
 
         <div>
-            <strong>
-                Pinagbayanan University
-            </strong>
-
-            <p>
-                Student Registration System
-            </p>
+            <strong>Pinagbayanan University</strong>
+            <p>Student Registration System</p>
         </div>
 
         <span>

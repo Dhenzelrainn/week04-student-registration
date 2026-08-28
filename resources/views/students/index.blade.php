@@ -11,9 +11,7 @@
         <div class="students-heading">
 
             <div>
-                <span class="section-label">
-                    STUDENT DIRECTORY
-                </span>
+                <span class="section-label">STUDENT DIRECTORY</span>
 
                 <h1>
                     Registered
@@ -21,8 +19,7 @@
                 </h1>
 
                 <p>
-                    View all student records currently stored
-                    in the registration system.
+                    View all student records currently stored in the registration system.
                 </p>
             </div>
 
@@ -30,8 +27,7 @@
                 href="{{ route('students.create') }}"
                 class="primary-button"
             >
-                Register Student
-                <span>+</span>
+                + Register Student
             </a>
 
         </div>
@@ -42,9 +38,7 @@
             <div class="table-header">
 
                 <div>
-                    <strong>
-                        Student Records
-                    </strong>
+                    <strong>Student Records</strong>
 
                     <span>
                         {{ $students->count() }}
@@ -59,17 +53,12 @@
 
                 <div class="empty-state">
 
-                    <div class="empty-icon">
-                        S
-                    </div>
+                    <div class="empty-icon">S</div>
 
-                    <h2>
-                        No students registered yet.
-                    </h2>
+                    <h2>No students registered yet.</h2>
 
                     <p>
-                        Student records will appear here after
-                        a successful registration.
+                        Student records will appear here after a successful registration.
                     </p>
 
                     <a
@@ -77,7 +66,6 @@
                         class="primary-button"
                     >
                         Register First Student
-                        <span>→</span>
                     </a>
 
                 </div>
@@ -95,7 +83,7 @@
                                 <th>Program</th>
                                 <th>Year</th>
                                 <th>Email</th>
-                                <th></th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
 
@@ -106,7 +94,6 @@
                             <tr>
 
                                 <td>
-
                                     <div class="table-student">
 
                                         <img
@@ -115,50 +102,25 @@
                                         >
 
                                         <div>
-                                            <strong>
-                                                {{ $student->full_name }}
-                                            </strong>
-
-                                            <span>
-                                                {{ $student->gender }}
-                                            </span>
+                                            <strong>{{ $student->full_name }}</strong>
+                                            <span>{{ $student->gender }}</span>
                                         </div>
 
                                     </div>
-
                                 </td>
 
+                                <td>{{ $student->student_id }}</td>
+                                <td>{{ $student->program }}</td>
+                                <td>{{ $student->year_level }}</td>
+                                <td>{{ $student->email }}</td>
 
                                 <td>
-                                    {{ $student->student_id }}
-                                </td>
-
-
-                                <td>
-                                    {{ $student->program }}
-                                </td>
-
-
-                                <td>
-                                    {{ $student->year_level }}
-                                </td>
-
-
-                                <td>
-                                    {{ $student->email }}
-                                </td>
-
-
-                                <td>
-
                                     <a
                                         href="{{ route('students.show', $student) }}"
                                         class="view-link"
                                     >
-                                        View
-                                        <span>→</span>
+                                        View →
                                     </a>
-
                                 </td>
 
                             </tr>
