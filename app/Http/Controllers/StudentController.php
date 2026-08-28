@@ -105,7 +105,7 @@ class StudentController extends Controller
                     'required',
                     'image',
                     'mimes:jpg,jpeg,png',
-                    'max:2048',
+                    'max:5120',
                 ],
             ],
             [
@@ -142,7 +142,7 @@ class StudentController extends Controller
                 'profile_picture.required' => 'Profile picture is required.',
                 'profile_picture.image' => 'The uploaded file must be an image.',
                 'profile_picture.mimes' => 'Profile picture must be JPG, JPEG, or PNG.',
-                'profile_picture.max' => 'Profile picture must not exceed 2 MB.',
+                'profile_picture.max' => 'Profile picture must not exceed 5 MB.',
             ]
         );
 

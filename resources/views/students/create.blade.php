@@ -107,9 +107,21 @@
                         </strong>
 
                         <p>
-                            Some fields need to be corrected
-                            before registration can continue.
+                            Fix the following before registration can continue:
                         </p>
+
+                        <ul class="validation-error-list" style="margin: 8px 0 0 18px; padding: 0;">
+                            @foreach ($errors->all() as $error)
+                                <li style="margin-bottom: 4px; font-size: 11px; line-height: 1.5;">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+
+                        @if ($errors->has('profile_picture'))
+                            <p class="validation-file-note" style="margin-top: 10px; font-size: 10px; line-height: 1.5;">
+                                Note: For security, browsers clear selected files after a failed submission.
+                                Please select your profile picture again before resubmitting.
+                            </p>
+                        @endif
                     </div>
 
                 </div>
@@ -163,6 +175,7 @@
                                 type="text"
                                 id="first_name"
                                 name="first_name"
+                                required
                                 value="{{ old('first_name') }}"
                                 placeholder="Enter first name"
                                 class="{{ $errors->has('first_name') ? 'input-error' : '' }}"
@@ -213,6 +226,7 @@
                                 type="text"
                                 id="last_name"
                                 name="last_name"
+                                required
                                 value="{{ old('last_name') }}"
                                 placeholder="Enter last name"
                                 class="{{ $errors->has('last_name') ? 'input-error' : '' }}"
@@ -238,6 +252,7 @@
                                 type="date"
                                 id="date_of_birth"
                                 name="date_of_birth"
+                                required
                                 value="{{ old('date_of_birth') }}"
                                 max="{{ now()->toDateString() }}"
                                 class="{{ $errors->has('date_of_birth') ? 'input-error' : '' }}"
@@ -262,6 +277,7 @@
                             <select
                                 id="gender"
                                 name="gender"
+                                required
                                 class="{{ $errors->has('gender') ? 'input-error' : '' }}"
                             >
                                 <option value="">
@@ -340,6 +356,7 @@
                                 type="text"
                                 id="student_id"
                                 name="student_id"
+                                required
                                 value="{{ old('student_id') }}"
                                 placeholder="Example: 2026-00123"
                                 class="{{ $errors->has('student_id') ? 'input-error' : '' }}"
@@ -364,6 +381,7 @@
                             <select
                                 id="program"
                                 name="program"
+                                required
                                 class="{{ $errors->has('program') ? 'input-error' : '' }}"
                             >
 
@@ -420,6 +438,7 @@
                             <select
                                 id="year_level"
                                 name="year_level"
+                                required
                                 class="{{ $errors->has('year_level') ? 'input-error' : '' }}"
                             >
 
@@ -496,6 +515,7 @@
                                 type="email"
                                 id="email"
                                 name="email"
+                                required
                                 value="{{ old('email') }}"
                                 placeholder="student@example.com"
                                 class="{{ $errors->has('email') ? 'input-error' : '' }}"
@@ -521,6 +541,7 @@
                                 type="text"
                                 id="mobile_number"
                                 name="mobile_number"
+                                required
                                 value="{{ old('mobile_number') }}"
                                 placeholder="09123456789"
                                 inputmode="numeric"
@@ -547,6 +568,7 @@
                             <textarea
                                 id="address"
                                 name="address"
+                                required
                                 rows="4"
                                 placeholder="House number, street, barangay, city/municipality, province"
                                 class="{{ $errors->has('address') ? 'input-error' : '' }}"
@@ -637,7 +659,7 @@
                                     </p>
 
                                     <small>
-                                        Maximum file size: 2 MB
+                                        Maximum file size: 5 MB
                                     </small>
                                 </div>
 
@@ -651,6 +673,7 @@
                                 type="file"
                                 id="profile_picture"
                                 name="profile_picture"
+                                required
                                 accept=".jpg,.jpeg,.png,image/jpeg,image/png"
                                 class="file-input"
                             >
